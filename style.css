@@ -25,6 +25,15 @@ header{
     bottom: 100px;
 }
 
+.barraNavegacionLista li:hover{
+  transform: scale(1.5);
+  background-color: orange;
+}
+
+.barraNavegacionLista li{
+    transition: transform 1s, background-color 1s;
+}
+
 .barraNavegacion a{
  text-decoration: none;
  font-size: 20px;
@@ -78,6 +87,13 @@ h2{
     position: relative;
     bottom: 50px;
     left: 300px;
+    padding: 2px;
+    transition: transform 1s;
+}
+
+.seccionTitularesBoton:hover{
+    transform: scale(1.5);
+    background-color: orange;
 }
 
 p{
@@ -89,7 +105,7 @@ p{
     height: 500px;
 }
 .seccionDosIndex{
-    background-color: #2155BF;
+    background-image: linear-gradient(to right, blue, orange);
     color: white;
     text-align: center;
     height: 150px;
@@ -103,10 +119,36 @@ p{
 }
 .seccionTresIndexGrafico{
     margin-left: 1000px;
-    height:300px;
+    height:200px;
     position:relative;
     bottom: 60px;
+    animation-name: rotarGrafico;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
 }
+
+@keyframes rotarGrafico {
+   0%{
+       transform: rotate(0deg);
+   }
+   25%{
+    transform: rotate(45deg);
+}
+   50%{
+    transform: rotate(180deg);
+}
+   75%{
+    transform: rotate(270deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+
+}
+
+
 .seccionCuatroIndex{
     background-color: #2155BF;
     color: white;
@@ -139,11 +181,12 @@ p{
     width: 700px;
     position: relative;
     top: 300px
-    
-    
-  
-  
+
+
+
+
 }
+
 /*CONSULTORIA*/
 .parrafoConsultoria{
     position:relative;
