@@ -121,7 +121,7 @@ p{
 }
 .seccionDosIndex{
 
-    background-image: linear-gradient(to right, blue, orange);
+    background-color: blue;
     color: white;
     text-align: center;
     height: 150px;
@@ -349,11 +349,16 @@ p{
     }
     p{
         font-size: 18px;
+     }
+
  }
    
+
 @media only screen and (max-width: 320px) {
     .mainContent{
     background-color: rgb(84, 17, 240);
+
+    }
     
 
 
