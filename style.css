@@ -15,27 +15,57 @@ header{
 .logo{
     padding: 10px;
     height:80px;
-    
+
 }
 
 .barraNavegacionLista{
-    list-style: none; 
-    margin-left: 40vw;
+    list-style: none;
+    text-align:right;
     position: relative;
     bottom: 100px;
 }
 
+.toggle{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  display: none;
+
+}
+
+
+.c{
+  display:flex;
+  justify-content:center;
+  margin-bottom:15px;
+  background:#fff;
+}
+
+.img{
+  width:150px;
+  margin-left:20px;
+}
+
+.title{
+  height:100%;
+  margin-top:15px;
+}
+
 .barraNavegacion a{
  text-decoration: none;
- font-size: 20px;
+ font-size: 14px;
+ margin: -10px;
+
 }
 
 .barraNavegacionLista li{
     display: inline-block;
     margin: 15px;
     padding:10px;
-    
 }
+
 
 /*MAIN*/
 
@@ -46,6 +76,7 @@ h1{
     position:relative;
     top: 20px;
     left: 10px;
+    
     
 }
 
@@ -89,7 +120,8 @@ p{
     height: 500px;
 }
 .seccionDosIndex{
-    background-color: #2155BF;
+
+    background-image: linear-gradient(to right, blue, orange);
     color: white;
     text-align: center;
     height: 150px;
@@ -197,3 +229,166 @@ p{
     height:30px;
    
 }
+
+ /*GRID ACADEMIA*/
+
+ .galeria{
+    display:grid;
+    grid-template-columns: 1fr repeat(2, 1.5fr) repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.titulosCursos Uno{
+    grid-area: 1 / 2 / 2 / 3;
+    align-items: center;
+    background-color: white;
+}
+
+.titulosCursos Dos{
+    grid-area: 1 / 3 / 2 / 4;
+    align-items: center;
+    background-color: white;
+}
+.titulosCursos Tres{
+    grid-area: 3 / 2 / 4 / 3;
+    align-items: center;
+    background-color: white;
+}
+.titulosCursos Cuatro{
+    grid-area: 4 / 2 / 5 / 3;
+    align-items: center;
+    background-color: white;
+}
+
+.imagen Uno{
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: black;
+}
+.imagen Dos{
+    grid-area: 2 / 3 / 3 / 4;
+    background-color: black;
+}
+.imagen Tres{
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: black;
+}
+.imagen Cuatro{
+    grid-area: 4 / 3 / 5 / 4;
+    background-color: black;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 768px) {
+
+    .ilustracionTitulares{
+        display:none;
+    }
+    .sidebar{
+        display:none;
+    }
+
+    .barraNavegacion a{
+        text-decoration: none;
+        font-size: 12px;
+        margin: -40px;
+        margin-right: 10px;
+        
+        
+    }
+    
+    .mainContent{
+
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+   
+    }
+   
+    .seccionTitulares{
+        height: 200px;
+        grid-column: 1/4;
+        align-self: stretch;
+        justify-self: center;
+        padding-top: 40px;
+   
+    }
+   
+    .seccionDosIndex{
+       padding: 10px;
+       background-color: blue;
+       grid-column: 1/4;
+       height: 200px;
+       align-self: stretch;
+    }
+   
+    .seccionTresIndex{
+       padding: 10px;
+       grid-column: 1/4;
+       height: 250px;
+       align-self: stretch;
+       background: white;
+    }
+   
+    .seccionCuatroIndex{
+       padding: 10px;
+       background-color: blue;
+       grid-column: 1/3;
+       height: 150px;
+       align-self: stretch;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    p{
+        font-size: 18px;
+ }
+   
+@media only screen and (max-width: 320px) {
+    .mainContent{
+    background-color: rgb(84, 17, 240);
+    
+
+
+    ilustracionTitulares{
+       display: none;
+    }
+
+   .sidebar{
+       display:none;
+   }
+   
+  
+    .barraNavegacion a{
+        text-decoration: none;
+        font-size: 12px;
+        margin: -10px;
+    }
+
+    .seccionDosIndex{
+        background-color: rgb(84, 17, 240);
+        font-size: 12px;
+    }
+    .seccionCuatroIndex{
+        background-color: rgb(84, 17, 240);
+        font-size: 12px;
+    }   
+
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{
+        font-size: 16px;
+    }
+
+    } 
